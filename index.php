@@ -20,23 +20,23 @@ echo `<body>
 
 /* Adds the buttons */
 echo '<div class = "btn-toolbar">
-      <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
        Add
      </button>
-
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
-     <button class="delete btn btn-danger btn-sm">Delete</button> </form>
-     <button class="edit btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
+     <button type="button" class="btn btn-danger btn-sm">Delete</button> </form>
+     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
       Edit
     </button>
-    <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
      Add Column
    </button>
+   <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormColDelete">
+       Remove Column
+   </button>
      </div>
-      <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormColDelete">
-          Remove Column
-      </button>';
+';
 
 
 
