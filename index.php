@@ -88,6 +88,8 @@ echo '<!-- Modal -->
     </div>
 </div>';
 
+
+// Add Colum Modal
 echo '<!-- Modal -->
 <div class="modal fade" id="myModalNormCol" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -117,7 +119,7 @@ echo '<!-- Modal -->
                     echo '<input name="', "col",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
 
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
-                    echo  '<select class="selectpicker" name="DataType">
+                    echo  '<select class="form-control" name="DataType">
                            <option>Text</option>
                            <option value="Long">Numeric</option>
                            <option>Date</option>
@@ -143,7 +145,7 @@ echo '<!-- Modal -->
 </div>';
 
 echo '<!-- Modal -->
-<div class="modal fade" id="myModalNormColDelete" tabindex="-1" role="dialog"
+ <div class="modal fade" id="myModalNormColDelete" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -164,7 +166,7 @@ echo '<!-- Modal -->
 
                 <form id="removeColumnForm" action="myPHP/removeColumn.php" method="post">';
 
-                echo '<select class="selectpicker" name="delCol">';
+                echo '<select class="form-control" name="delCol">';
                 echo '<option> Select Column </option>';
                     $newCol = "Delete Column";
                     $sql = "SHOW COLUMNS FROM test2";
