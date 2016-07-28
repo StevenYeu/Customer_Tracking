@@ -8,7 +8,7 @@
                 foreach($_POST as $key=>$value){
                   if($key != 'id'){
                     $keyMod = str_replace('_', ' ', $key);
-                    $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
+                    $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id and '$value' is not null and '$value' <> ''" );
                   }
                 }
 

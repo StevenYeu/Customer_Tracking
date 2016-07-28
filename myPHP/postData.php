@@ -10,7 +10,9 @@
   //TODO this will need to be updated when data field names are changed
   foreach($_POST as $key=>$value){
     $keyMod = str_replace('_', ' ', $key);
-    $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
+    if ($keyMod != "id") {
+      $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
+    }
   }
 
 

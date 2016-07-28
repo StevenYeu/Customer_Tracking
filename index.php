@@ -217,12 +217,14 @@ echo '<!-- Modal -->
 
                 <form id="myEdit" action="myPHP/updateData.php" method="post">
                 <input name="alterId" id="alterId" type="int" hidden="true">';
-
-                 foreach ($FIELDS as $val){
-                   echo '<div class="form-group">';
-                   echo '<label for=',$val,"input>",$val,'</label>';
-                   echo '<input type="',$val,'"', 'name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
-                   echo '</div>';
+                $data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
+                 while ($val = $data->fetch_field()){
+                   if ($val->name != 'id') {
+                      echo '<div class="form-group">';
+                      echo '<label for=',$val->name,"input>",$val->name,'</label>';
+                      echo '<input type="',$val->name,'"', 'name="', $val->name,'" class="form-control" id =',$val->name,'input placeholder=""','/>';
+                      echo '</div>';
+                   }
 
                  }
             echo '<div>
