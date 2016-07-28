@@ -128,13 +128,13 @@ echo '<!-- Modal -->
                     echo '</div>';
 
 
-            echo '</div>';
+            echo '<div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  </div></form>','</div>';
 
             echo '<!-- Modal Footer -->
             <div class="modal-footer">',
-            '<div>
-             <button type="submit" class="btn btn-default">Submit</button>
-           </div></form>',
+
                 '<button type="button" class="btn btn-default"
                         data-dismiss="modal">
                             Close
@@ -144,6 +144,7 @@ echo '<!-- Modal -->
     </div>
 </div>';
 
+// For Deleteing Columns
 echo '<!-- Modal -->
  <div class="modal fade" id="myModalNormColDelete" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -177,14 +178,13 @@ echo '<!-- Modal -->
                       }
                     }
 
-            echo '</select></div>';
+            echo '</select>','<div>
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div></form></div>';
+
 
             echo '<!-- Modal Footer -->
             <div class="modal-footer">',
-
-                '<div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div></form>',
 
                 '<button type="button" class="btn btn-default"
                         data-dismiss="modal">
